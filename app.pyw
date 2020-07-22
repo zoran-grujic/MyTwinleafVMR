@@ -193,9 +193,9 @@ class MyUi(Ui_MainWindow):
             self.BzPlot.plot(timeB, bz, pen=penZ)
             self.BzPlot.setLabel('left', self.plotLabelFormat("Bz", unit, fontSize=fontSize, color=colorZ))
 
-            bxmean = np.mean(bx[-10:])
-            bymean = np.mean(by[-10:])
-            bzmean = np.mean(bz[-10:])
+            bxmean = np.mean(bx[-self.meanSpinBox.value():])
+            bymean = np.mean(by[-self.meanSpinBox.value():])
+            bzmean = np.mean(bz[-self.meanSpinBox.value():])
             btmean = np.sqrt(bxmean**2+bymean**2+bzmean**2)
             self.BxLabel.setText(self.valueLabelFormat("{:,.2f}".format(bxmean).replace(',', ' '), color=colorX))
             self.ByLabel.setText(self.valueLabelFormat("{:,.2f}".format(bymean).replace(',', ' '), color=colorY))

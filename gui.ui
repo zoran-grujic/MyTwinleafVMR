@@ -231,13 +231,18 @@
             </item>
             <item>
              <widget class="QLabel" name="label">
+              <property name="font">
+               <font>
+                <pointsize>14</pointsize>
+               </font>
+              </property>
               <property name="text">
                <string>Usrednjavanje</string>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QSpinBox" name="spinBox">
+             <widget class="QSpinBox" name="meanSpinBox">
               <property name="minimumSize">
                <size>
                 <width>70</width>
