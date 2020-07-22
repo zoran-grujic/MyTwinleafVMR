@@ -406,6 +406,9 @@
           <property name="text">
            <string>Bx value</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
          </widget>
         </item>
         <item row="3" column="0">
@@ -442,6 +445,9 @@
           <property name="text">
            <string>Bz value</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
          </widget>
         </item>
         <item row="1" column="4">
@@ -456,6 +462,9 @@
           </property>
           <property name="text">
            <string>|B| value</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -508,6 +517,9 @@
           <property name="text">
            <string>P value</string>
           </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+          </property>
          </widget>
         </item>
         <item row="3" column="3">
@@ -549,6 +561,9 @@
           </property>
           <property name="text">
            <string>By value</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
