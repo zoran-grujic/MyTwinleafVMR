@@ -19,7 +19,7 @@ class myVMRSerial:
     cbP = CircularBuffer(bufferSize)
     cbT = CircularBuffer(bufferSize)
 
-    def __init__(self, port="COM7"):
+    def __init__(self, port="COM3"):
         try:
             self.ser = serial.Serial(port, 115200, timeout=.5)  # open serial port
             print(self.ser.name)
