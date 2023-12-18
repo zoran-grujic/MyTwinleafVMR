@@ -56,7 +56,7 @@ class MyUi(Ui_MainWindow):
     def setupUi(self, MainWindow):
         super(MyUi, self).setupUi(MainWindow)  # call function of the parent class
 
-        self.PlotWindow = pg.GraphicsWindow()
+        self.PlotWindow = pg.GraphicsLayoutWidget()
         containing_layout = self.BxPlotPlaceholder.parent().layout()
         containing_layout.replaceWidget(self.BxPlotPlaceholder, self.PlotWindow)
 
@@ -69,7 +69,7 @@ class MyUi(Ui_MainWindow):
         self.BzPlot = layout.addPlot()
         self.PlotWindow.setCentralItem(layout)
 
-        self.ProjectionPlotWindow = pg.GraphicsWindow()
+        self.ProjectionPlotWindow = pg.GraphicsLayoutWidget()
         containing_layout = self.AplaceholderWidget.parent().layout()
         containing_layout.replaceWidget(self.AplaceholderWidget, self.ProjectionPlotWindow)
         layoutP = pg.GraphicsLayout()
@@ -247,7 +247,7 @@ class MyUi(Ui_MainWindow):
             #self.YZPlot.setYRange(-maxyz, maxyz, padding=0)
 
         except Exception as e:
-            print(e)
+            print("Plot error: " + str(e))
             # print(bx)
             pass
         finally:
