@@ -197,9 +197,17 @@ class MyUi(Ui_MainWindow):
             bymean = np.mean(by[-self.meanSpinBox.value():])
             bzmean = np.mean(bz[-self.meanSpinBox.value():])
             btmean = np.sqrt(bxmean**2+bymean**2+bzmean**2)
+            bxstd = np.std(bx)
+            bystd = np.std(by)
+            bzstd = np.std(bz)
             self.BxLabel.setText(self.valueLabelFormat("{:,.2f}".format(bxmean).replace(',', ' '), color=colorX))
             self.ByLabel.setText(self.valueLabelFormat("{:,.2f}".format(bymean).replace(',', ' '), color=colorY))
             self.BzLabel.setText(self.valueLabelFormat("{:,.2f}".format(bzmean).replace(',', ' '), color=colorZ))
+
+            self.BxsLabel.setText(self.valueLabelFormat("{:,.2f}".format(bxstd).replace(',', ' '), color=colorX))
+            self.BysLabel.setText(self.valueLabelFormat("{:,.2f}".format(bystd).replace(',', ' '), color=colorY))
+            self.BzsLabel.setText(self.valueLabelFormat("{:,.2f}".format(bzstd).replace(',', ' '), color=colorZ))
+            self.BusLabel.setText(self.valueLabelFormat("{:,.2f}".format(bxstd+bystd+bzstd).replace(',', ' '), color=colorZ))
 
             self.BtLabel.setText("{:,.2f}".format(btmean).replace(',', ' '))
 
